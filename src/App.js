@@ -1,30 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
-import { getAllStartships } from './services/api-sw-api';
-import { useState, useEffect } from 'react';
+import { Route, Routes } from 'react-router-dom'
+import './App.css'
+import Starships from './pages/Starships'
+import NavBar from './components/NavBar'
 
 function App() {
-  const [starships, setStarships] = useState([])
-
-  useEffect(()=> {
-    const fetchMonsterList = async () => {
-      const starshipData = await getAllStartships()
-      setStarships(starshipData.results)
-    }
-    fetchMonsterList()
-  }, [])
-  console.log(starships)
-
   return (
-  <>
-    <h1>Slay</h1>
-    {starships.map(starship => 
-            <div key={starship.index}>
-              {starship.name}
-            </div>  
-          )}
-  </>
-  );
+    <>
+      <NavBar />
+      <Routes>
+        <Route path='/starships' element={<Starships />} />
+      </Routes>
+    </>
+  )
 }
 
-export default App;
+export default App
