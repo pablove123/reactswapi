@@ -1,9 +1,11 @@
 import { Link } from "react-router-dom";
 
 const StarshipCard = (props) => {
+  // const idx = props.star.url.slice(32,34)
+  // console.log(idx)
   return ( 
     <>
-    <Link to={props.star.name}>{props.star.name}
+    <Link to="/starship">{props.star.name}
     </Link>
     </>
    );

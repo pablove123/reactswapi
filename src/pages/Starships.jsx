@@ -2,6 +2,7 @@
 import { getAllStartships } from '../services/api-sw-api';
 import { useState, useEffect } from 'react';
 import StarshipCard from '../components/StarshipCard';
+import { Link } from 'react-router-dom';
 
 function Starships() {
   const [starships, setStarships] = useState([])
@@ -13,7 +14,6 @@ function Starships() {
     }
     fetchMonsterList()
   }, [])
-  console.log(starships)
 
   const style ={ 
     color:"red", 
@@ -22,10 +22,11 @@ function Starships() {
 
   return (
   <>
-    {starships.map(starship => 
+    {starships.map((starship, idx) => 
+    
             <div
-           style={style} key={starship.index}>
-              <StarshipCard star={starship}/>
+           style={style} key={starship[idx]}>
+              <Link to="/starship" state={{starship}}> {starship.name} </Link>
             </div>  
           )}
   </>
