@@ -1,0 +1,41 @@
+div{
+  text-align: center;
+  padding: 20px;
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 20px;
+  border-radius: 10px;
+  height: 80px;
+  font-size: 40px;
+
+}
+header{
+  background-color: black;
+  width: 100%;
+  text-decoration: none;
+  color: white;
+  line-height: 50px;
+}
+a{
+  text-decoration: none;
+  color: white;
+}
+a:active{
+  text-decoration: none;
+}
+
+#name{
+  background-color: rgb(23, 61, 41);
+}
+
+body {
+  background-image: url("https://www.innovationnewsnetwork.com/wp-content/uploads/2021/02/Primordial-galaxy-696x392.jpg");
+}
+
+h3{
+  font-size: 80px;
+  color:aliceblue
+}

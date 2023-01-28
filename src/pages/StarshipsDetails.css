@@ -1,0 +1,14 @@
+main{
+  font-size: 20px;
+  line-height: 10px;
+  border-radius: 10px;
+  height: 150px;
+  padding: 80px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgb(23, 61, 41);
+  margin-top: 50px;
+  color: antiquewhite;
+}
