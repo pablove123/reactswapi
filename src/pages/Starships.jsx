@@ -1,6 +1,7 @@
 
 import { getAllStartships } from '../services/api-sw-api';
 import { useState, useEffect } from 'react';
+import StarshipCard from '../components/StarshipCard';
 
 function Starships() {
   const [starships, setStarships] = useState([])
@@ -14,13 +15,17 @@ function Starships() {
   }, [])
   console.log(starships)
 
+  const style ={ 
+    color:"red", 
+    fontSize: "50px"
+  }
+
   return (
   <>
-    <h1>Slay</h1>
     {starships.map(starship => 
-            <div key={starship.index}>
-              {/* <Link to="/starship" state={{starship}}>{starship.name}</Link> */}
-              <button>{starship.name}</button>
+            <div
+           style={style} key={starship.index}>
+              <StarshipCard star={starship}/>
             </div>  
           )}
   </>
