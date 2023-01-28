@@ -11,7 +11,7 @@ function App() {
       <Routes>
         <Route path='/starships' element={<Starships />} />
         <Route 
-          path='/starships/:starshipname'
+          path='/starships/:starshipName'
           element={<StarshipDetails />}
         />
       </Routes>
